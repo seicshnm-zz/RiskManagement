@@ -108,10 +108,14 @@
         'grdTab3.ClearProgramFilters()
         'CtsGrid3.AddFilter("COLUMN6", "=", ComboBox1.SelectedValue,, False, "System.String", "*PROGRAM", True)
 
+        CtsGrid1.ClearProgramFilters()
+        CtsGrid1.AddFilter("C6", "=", cboRegion.SelectedItem,, False, "System.String", "*PROGRAM", True)
+
         If Not Loading Then
             grdTab1.RefreshData()
             'grdTab2.RefreshData()
             'grdTab3.RefreshData()
+            CtsGrid1.RefreshData()
         End If
 
     End Sub
@@ -178,5 +182,33 @@
         App.SaveApplicationSetting(Me)
         App.SaveApplicationSetting("RiskManagement", Me.Name, "FromDate", CtsDateTime1.Value.ToString)
         App.SaveApplicationSetting("RiskManagement", Me.Name, "ToDate", CtsDateTime2.Value.ToString)
+    End Sub
+
+    Private Sub grdTab1_dgv_MouseDoubleClick(sender As Object, e As EventArgs) Handles grdTab1.dgv_MouseDoubleClick
+
+        If grdTab1.dgvCTS.CurrentRow IsNot Nothing Then
+
+            Dim dgvr As DataGridViewRow = grdTab1.dgvCTS.CurrentRow
+            Dim FID As Integer = dgvr.Cells("F45FID").Value
+
+            Dim f As New NMDetail
+            f.SubmittedForm = FID
+            f.ShowDialog()
+        End If
+
+    End Sub
+
+    Private Sub CTSGrid1_dgv_MouseDoubleClick(sender As Object, e As EventArgs) Handles CtsGrid1.dgv_MouseDoubleClick
+
+        If CtsGrid1.dgvCTS.CurrentRow IsNot Nothing Then
+
+            Dim dgvr As DataGridViewRow = CtsGrid1.dgvCTS.CurrentRow
+            Dim FID As Integer = dgvr.Cells("F45FID").Value
+
+            Dim f As New NMDetail
+            f.SubmittedForm = FID
+            f.ShowDialog()
+        End If
+
     End Sub
 End Class

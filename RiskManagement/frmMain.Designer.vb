@@ -39,10 +39,13 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnRefresh = New System.Windows.Forms.Button()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.CtsGrid1 = New CTS.Controls.CTSGrid()
         Me.tcMain.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'grdTab1
@@ -79,6 +82,7 @@ Partial Class frmMain
         Me.tcMain.Controls.Add(Me.TabPage1)
         Me.tcMain.Controls.Add(Me.TabPage2)
         Me.tcMain.Controls.Add(Me.TabPage3)
+        Me.tcMain.Controls.Add(Me.TabPage4)
         Me.tcMain.CustomStyle = CTS.Controls.TabControlCTS.CustomStyles.Chrome
         Me.tcMain.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed
         Me.tcMain.HoverBackcolor = System.Drawing.Color.Empty
@@ -281,6 +285,43 @@ Partial Class frmMain
         Me.btnRefresh.Text = "Refresh"
         Me.btnRefresh.UseVisualStyleBackColor = True
         '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.CtsGrid1)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(885, 382)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Near Miss Composite Summary"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'CtsGrid1
+        '
+        Me.CtsGrid1.AllowFilter = True
+        Me.CtsGrid1.AllowSort = True
+        Me.CtsGrid1.AllowWrapping = True
+        Me.CtsGrid1.AutoRefresh = 0
+        Me.CtsGrid1.BackColor = System.Drawing.Color.Honeydew
+        Me.CtsGrid1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.CtsGrid1.BannerText = Nothing
+        Me.CtsGrid1.ConnectionString = Nothing
+        Me.CtsGrid1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CtsGrid1.GridApp = "CW"
+        Me.CtsGrid1.GridMode = CTS.Controls.GridModes.Display
+        Me.CtsGrid1.GridName = "CW_NearMiss"
+        Me.CtsGrid1.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
+        Me.CtsGrid1.Location = New System.Drawing.Point(3, 3)
+        Me.CtsGrid1.Name = "CtsGrid1"
+        Me.CtsGrid1.PrimaryKeys = Nothing
+        Me.CtsGrid1.SelectionDelay = 0
+        Me.CtsGrid1.ShowBanner = True
+        Me.CtsGrid1.ShowStatusStrip = True
+        Me.CtsGrid1.ShowTotals = False
+        Me.CtsGrid1.Size = New System.Drawing.Size(879, 376)
+        Me.CtsGrid1.TabIndex = 4
+        Me.CtsGrid1.UpdateMethod = CTS.Controls.GridUpdateMethods.None
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -299,6 +340,7 @@ Partial Class frmMain
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -320,4 +362,6 @@ Partial Class frmMain
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnRefresh As Button
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents CtsGrid1 As CTS.Controls.CTSGrid
 End Class
