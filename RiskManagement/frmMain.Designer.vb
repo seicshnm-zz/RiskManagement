@@ -23,66 +23,66 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.grdTab1 = New CTS.Controls.CTSGrid()
+        Me.grdSubmittals = New CTS.Controls.CTSGrid()
         Me.tcMain = New CTS.Controls.TabControlCTS()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tpSubmittals = New System.Windows.Forms.TabPage()
         Me.pnlTab1 = New System.Windows.Forms.Panel()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.grdTab2 = New CTS.Controls.CTSGrid()
+        Me.tpRaw1 = New System.Windows.Forms.TabPage()
+        Me.grdRaw1 = New CTS.Controls.CTSGrid()
         Me.pnlTab2 = New System.Windows.Forms.Panel()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.grdTab3 = New CTS.Controls.CTSGrid()
+        Me.tpRaw2 = New System.Windows.Forms.TabPage()
+        Me.grdRaw2 = New CTS.Controls.CTSGrid()
         Me.pnlTab3 = New System.Windows.Forms.Panel()
+        Me.tpComposite = New System.Windows.Forms.TabPage()
+        Me.grdComposite = New CTS.Controls.CTSGrid()
         Me.cboRegion = New System.Windows.Forms.ComboBox()
         Me.CtsDateTime1 = New CTS.Controls.CTSDateTime()
         Me.CtsDateTime2 = New CTS.Controls.CTSDateTime()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnRefresh = New System.Windows.Forms.Button()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.CtsGrid1 = New CTS.Controls.CTSGrid()
         Me.tcMain.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
+        Me.tpSubmittals.SuspendLayout()
+        Me.tpRaw1.SuspendLayout()
+        Me.tpRaw2.SuspendLayout()
+        Me.tpComposite.SuspendLayout()
         Me.SuspendLayout()
         '
-        'grdTab1
+        'grdSubmittals
         '
-        Me.grdTab1.AllowFilter = True
-        Me.grdTab1.AllowSort = True
-        Me.grdTab1.AllowWrapping = False
-        Me.grdTab1.AutoRefresh = 0
-        Me.grdTab1.BackColor = System.Drawing.Color.Honeydew
-        Me.grdTab1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.grdTab1.BannerText = Nothing
-        Me.grdTab1.ConnectionString = Nothing
-        Me.grdTab1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grdTab1.GridApp = "CW"
-        Me.grdTab1.GridMode = CTS.Controls.GridModes.Display
-        Me.grdTab1.GridName = "FormSbm_364"
-        Me.grdTab1.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
-        Me.grdTab1.Location = New System.Drawing.Point(3, 52)
-        Me.grdTab1.Name = "grdTab1"
-        Me.grdTab1.PrimaryKeys = Nothing
-        Me.grdTab1.SelectionDelay = 0
-        Me.grdTab1.ShowBanner = True
-        Me.grdTab1.ShowStatusStrip = True
-        Me.grdTab1.ShowTotals = False
-        Me.grdTab1.Size = New System.Drawing.Size(879, 327)
-        Me.grdTab1.TabIndex = 0
-        Me.grdTab1.UpdateMethod = CTS.Controls.GridUpdateMethods.None
+        Me.grdSubmittals.AllowFilter = True
+        Me.grdSubmittals.AllowSort = True
+        Me.grdSubmittals.AllowWrapping = False
+        Me.grdSubmittals.AutoRefresh = 0
+        Me.grdSubmittals.BackColor = System.Drawing.Color.Honeydew
+        Me.grdSubmittals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.grdSubmittals.BannerText = Nothing
+        Me.grdSubmittals.ConnectionString = Nothing
+        Me.grdSubmittals.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grdSubmittals.GridApp = "CW"
+        Me.grdSubmittals.GridMode = CTS.Controls.GridModes.Display
+        Me.grdSubmittals.GridName = "FormSbm_364"
+        Me.grdSubmittals.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
+        Me.grdSubmittals.Location = New System.Drawing.Point(3, 52)
+        Me.grdSubmittals.Name = "grdSubmittals"
+        Me.grdSubmittals.PrimaryKeys = Nothing
+        Me.grdSubmittals.SelectionDelay = 0
+        Me.grdSubmittals.ShowBanner = True
+        Me.grdSubmittals.ShowStatusStrip = True
+        Me.grdSubmittals.ShowTotals = False
+        Me.grdSubmittals.Size = New System.Drawing.Size(879, 327)
+        Me.grdSubmittals.TabIndex = 0
+        Me.grdSubmittals.UpdateMethod = CTS.Controls.GridUpdateMethods.None
         '
         'tcMain
         '
         Me.tcMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tcMain.Controls.Add(Me.TabPage1)
-        Me.tcMain.Controls.Add(Me.TabPage2)
-        Me.tcMain.Controls.Add(Me.TabPage3)
-        Me.tcMain.Controls.Add(Me.TabPage4)
+        Me.tcMain.Controls.Add(Me.tpComposite)
+        Me.tcMain.Controls.Add(Me.tpSubmittals)
+        Me.tcMain.Controls.Add(Me.tpRaw1)
+        Me.tcMain.Controls.Add(Me.tpRaw2)
         Me.tcMain.CustomStyle = CTS.Controls.TabControlCTS.CustomStyles.Chrome
         Me.tcMain.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed
         Me.tcMain.HoverBackcolor = System.Drawing.Color.Empty
@@ -97,17 +97,17 @@ Partial Class frmMain
         Me.tcMain.UnselectedTabBackcolor = System.Drawing.Color.Empty
         Me.tcMain.UnselectedTabForecolor = System.Drawing.Color.Black
         '
-        'TabPage1
+        'tpSubmittals
         '
-        Me.TabPage1.Controls.Add(Me.grdTab1)
-        Me.TabPage1.Controls.Add(Me.pnlTab1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(885, 382)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Near Miss Submittals"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.tpSubmittals.Controls.Add(Me.grdSubmittals)
+        Me.tpSubmittals.Controls.Add(Me.pnlTab1)
+        Me.tpSubmittals.Location = New System.Drawing.Point(4, 25)
+        Me.tpSubmittals.Name = "tpSubmittals"
+        Me.tpSubmittals.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpSubmittals.Size = New System.Drawing.Size(885, 382)
+        Me.tpSubmittals.TabIndex = 0
+        Me.tpSubmittals.Text = "Near Miss Submittals"
+        Me.tpSubmittals.UseVisualStyleBackColor = True
         '
         'pnlTab1
         '
@@ -117,43 +117,43 @@ Partial Class frmMain
         Me.pnlTab1.Size = New System.Drawing.Size(879, 49)
         Me.pnlTab1.TabIndex = 3
         '
-        'TabPage2
+        'tpRaw1
         '
-        Me.TabPage2.Controls.Add(Me.grdTab2)
-        Me.TabPage2.Controls.Add(Me.pnlTab2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(885, 382)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Initial Review"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.tpRaw1.Controls.Add(Me.grdRaw1)
+        Me.tpRaw1.Controls.Add(Me.pnlTab2)
+        Me.tpRaw1.Location = New System.Drawing.Point(4, 25)
+        Me.tpRaw1.Name = "tpRaw1"
+        Me.tpRaw1.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpRaw1.Size = New System.Drawing.Size(885, 382)
+        Me.tpRaw1.TabIndex = 1
+        Me.tpRaw1.Text = "Initial Review"
+        Me.tpRaw1.UseVisualStyleBackColor = True
         '
-        'grdTab2
+        'grdRaw1
         '
-        Me.grdTab2.AllowFilter = True
-        Me.grdTab2.AllowSort = True
-        Me.grdTab2.AllowWrapping = False
-        Me.grdTab2.AutoRefresh = 0
-        Me.grdTab2.BackColor = System.Drawing.Color.Honeydew
-        Me.grdTab2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.grdTab2.BannerText = Nothing
-        Me.grdTab2.ConnectionString = Nothing
-        Me.grdTab2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grdTab2.GridApp = "CW"
-        Me.grdTab2.GridMode = CTS.Controls.GridModes.Display
-        Me.grdTab2.GridName = "FormSbm_368"
-        Me.grdTab2.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
-        Me.grdTab2.Location = New System.Drawing.Point(3, 55)
-        Me.grdTab2.Name = "grdTab2"
-        Me.grdTab2.PrimaryKeys = Nothing
-        Me.grdTab2.SelectionDelay = 0
-        Me.grdTab2.ShowBanner = True
-        Me.grdTab2.ShowStatusStrip = True
-        Me.grdTab2.ShowTotals = False
-        Me.grdTab2.Size = New System.Drawing.Size(879, 324)
-        Me.grdTab2.TabIndex = 1
-        Me.grdTab2.UpdateMethod = CTS.Controls.GridUpdateMethods.None
+        Me.grdRaw1.AllowFilter = True
+        Me.grdRaw1.AllowSort = True
+        Me.grdRaw1.AllowWrapping = False
+        Me.grdRaw1.AutoRefresh = 0
+        Me.grdRaw1.BackColor = System.Drawing.Color.Honeydew
+        Me.grdRaw1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.grdRaw1.BannerText = Nothing
+        Me.grdRaw1.ConnectionString = Nothing
+        Me.grdRaw1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grdRaw1.GridApp = "CW"
+        Me.grdRaw1.GridMode = CTS.Controls.GridModes.Display
+        Me.grdRaw1.GridName = "FormSbm_368"
+        Me.grdRaw1.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
+        Me.grdRaw1.Location = New System.Drawing.Point(3, 55)
+        Me.grdRaw1.Name = "grdRaw1"
+        Me.grdRaw1.PrimaryKeys = Nothing
+        Me.grdRaw1.SelectionDelay = 0
+        Me.grdRaw1.ShowBanner = True
+        Me.grdRaw1.ShowStatusStrip = True
+        Me.grdRaw1.ShowTotals = False
+        Me.grdRaw1.Size = New System.Drawing.Size(879, 324)
+        Me.grdRaw1.TabIndex = 1
+        Me.grdRaw1.UpdateMethod = CTS.Controls.GridUpdateMethods.None
         '
         'pnlTab2
         '
@@ -163,43 +163,43 @@ Partial Class frmMain
         Me.pnlTab2.Size = New System.Drawing.Size(879, 52)
         Me.pnlTab2.TabIndex = 2
         '
-        'TabPage3
+        'tpRaw2
         '
-        Me.TabPage3.Controls.Add(Me.grdTab3)
-        Me.TabPage3.Controls.Add(Me.pnlTab3)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(885, 382)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Corporate Review"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.tpRaw2.Controls.Add(Me.grdRaw2)
+        Me.tpRaw2.Controls.Add(Me.pnlTab3)
+        Me.tpRaw2.Location = New System.Drawing.Point(4, 25)
+        Me.tpRaw2.Name = "tpRaw2"
+        Me.tpRaw2.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpRaw2.Size = New System.Drawing.Size(885, 382)
+        Me.tpRaw2.TabIndex = 2
+        Me.tpRaw2.Text = "Corporate Review"
+        Me.tpRaw2.UseVisualStyleBackColor = True
         '
-        'grdTab3
+        'grdRaw2
         '
-        Me.grdTab3.AllowFilter = True
-        Me.grdTab3.AllowSort = True
-        Me.grdTab3.AllowWrapping = False
-        Me.grdTab3.AutoRefresh = 0
-        Me.grdTab3.BackColor = System.Drawing.Color.Honeydew
-        Me.grdTab3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.grdTab3.BannerText = Nothing
-        Me.grdTab3.ConnectionString = Nothing
-        Me.grdTab3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grdTab3.GridApp = "CW"
-        Me.grdTab3.GridMode = CTS.Controls.GridModes.Display
-        Me.grdTab3.GridName = "FormSbm_369"
-        Me.grdTab3.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
-        Me.grdTab3.Location = New System.Drawing.Point(3, 55)
-        Me.grdTab3.Name = "grdTab3"
-        Me.grdTab3.PrimaryKeys = Nothing
-        Me.grdTab3.SelectionDelay = 0
-        Me.grdTab3.ShowBanner = True
-        Me.grdTab3.ShowStatusStrip = True
-        Me.grdTab3.ShowTotals = False
-        Me.grdTab3.Size = New System.Drawing.Size(879, 324)
-        Me.grdTab3.TabIndex = 3
-        Me.grdTab3.UpdateMethod = CTS.Controls.GridUpdateMethods.None
+        Me.grdRaw2.AllowFilter = True
+        Me.grdRaw2.AllowSort = True
+        Me.grdRaw2.AllowWrapping = False
+        Me.grdRaw2.AutoRefresh = 0
+        Me.grdRaw2.BackColor = System.Drawing.Color.Honeydew
+        Me.grdRaw2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.grdRaw2.BannerText = Nothing
+        Me.grdRaw2.ConnectionString = Nothing
+        Me.grdRaw2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grdRaw2.GridApp = "CW"
+        Me.grdRaw2.GridMode = CTS.Controls.GridModes.Display
+        Me.grdRaw2.GridName = "FormSbm_369"
+        Me.grdRaw2.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
+        Me.grdRaw2.Location = New System.Drawing.Point(3, 55)
+        Me.grdRaw2.Name = "grdRaw2"
+        Me.grdRaw2.PrimaryKeys = Nothing
+        Me.grdRaw2.SelectionDelay = 0
+        Me.grdRaw2.ShowBanner = True
+        Me.grdRaw2.ShowStatusStrip = True
+        Me.grdRaw2.ShowTotals = False
+        Me.grdRaw2.Size = New System.Drawing.Size(879, 324)
+        Me.grdRaw2.TabIndex = 3
+        Me.grdRaw2.UpdateMethod = CTS.Controls.GridUpdateMethods.None
         '
         'pnlTab3
         '
@@ -208,6 +208,43 @@ Partial Class frmMain
         Me.pnlTab3.Name = "pnlTab3"
         Me.pnlTab3.Size = New System.Drawing.Size(879, 52)
         Me.pnlTab3.TabIndex = 4
+        '
+        'tpComposite
+        '
+        Me.tpComposite.Controls.Add(Me.grdComposite)
+        Me.tpComposite.Location = New System.Drawing.Point(4, 25)
+        Me.tpComposite.Name = "tpComposite"
+        Me.tpComposite.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpComposite.Size = New System.Drawing.Size(885, 382)
+        Me.tpComposite.TabIndex = 3
+        Me.tpComposite.Text = "Near Miss Composite Summary"
+        Me.tpComposite.UseVisualStyleBackColor = True
+        '
+        'grdComposite
+        '
+        Me.grdComposite.AllowFilter = True
+        Me.grdComposite.AllowSort = True
+        Me.grdComposite.AllowWrapping = True
+        Me.grdComposite.AutoRefresh = 0
+        Me.grdComposite.BackColor = System.Drawing.Color.Honeydew
+        Me.grdComposite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.grdComposite.BannerText = Nothing
+        Me.grdComposite.ConnectionString = Nothing
+        Me.grdComposite.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grdComposite.GridApp = "CW"
+        Me.grdComposite.GridMode = CTS.Controls.GridModes.Display
+        Me.grdComposite.GridName = "CW_NearMiss"
+        Me.grdComposite.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
+        Me.grdComposite.Location = New System.Drawing.Point(3, 3)
+        Me.grdComposite.Name = "grdComposite"
+        Me.grdComposite.PrimaryKeys = Nothing
+        Me.grdComposite.SelectionDelay = 0
+        Me.grdComposite.ShowBanner = True
+        Me.grdComposite.ShowStatusStrip = True
+        Me.grdComposite.ShowTotals = False
+        Me.grdComposite.Size = New System.Drawing.Size(879, 376)
+        Me.grdComposite.TabIndex = 4
+        Me.grdComposite.UpdateMethod = CTS.Controls.GridUpdateMethods.None
         '
         'cboRegion
         '
@@ -285,43 +322,6 @@ Partial Class frmMain
         Me.btnRefresh.Text = "Refresh"
         Me.btnRefresh.UseVisualStyleBackColor = True
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.CtsGrid1)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(885, 382)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Near Miss Composite Summary"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'CtsGrid1
-        '
-        Me.CtsGrid1.AllowFilter = True
-        Me.CtsGrid1.AllowSort = True
-        Me.CtsGrid1.AllowWrapping = True
-        Me.CtsGrid1.AutoRefresh = 0
-        Me.CtsGrid1.BackColor = System.Drawing.Color.Honeydew
-        Me.CtsGrid1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.CtsGrid1.BannerText = Nothing
-        Me.CtsGrid1.ConnectionString = Nothing
-        Me.CtsGrid1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CtsGrid1.GridApp = "CW"
-        Me.CtsGrid1.GridMode = CTS.Controls.GridModes.Display
-        Me.CtsGrid1.GridName = "CW_NearMiss"
-        Me.CtsGrid1.LoadMethod = CTS.Controls.GridLoadMethods.DataTable
-        Me.CtsGrid1.Location = New System.Drawing.Point(3, 3)
-        Me.CtsGrid1.Name = "CtsGrid1"
-        Me.CtsGrid1.PrimaryKeys = Nothing
-        Me.CtsGrid1.SelectionDelay = 0
-        Me.CtsGrid1.ShowBanner = True
-        Me.CtsGrid1.ShowStatusStrip = True
-        Me.CtsGrid1.ShowTotals = False
-        Me.CtsGrid1.Size = New System.Drawing.Size(879, 376)
-        Me.CtsGrid1.TabIndex = 4
-        Me.CtsGrid1.UpdateMethod = CTS.Controls.GridUpdateMethods.None
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -337,24 +337,24 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.Text = "Risk Management - Near Miss "
         Me.tcMain.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage4.ResumeLayout(False)
+        Me.tpSubmittals.ResumeLayout(False)
+        Me.tpRaw1.ResumeLayout(False)
+        Me.tpRaw2.ResumeLayout(False)
+        Me.tpComposite.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents grdTab1 As CTS.Controls.CTSGrid
+    Friend WithEvents grdSubmittals As CTS.Controls.CTSGrid
     Friend WithEvents tcMain As CTS.Controls.TabControlCTS
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents tpSubmittals As TabPage
     Friend WithEvents pnlTab1 As Panel
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents grdTab2 As CTS.Controls.CTSGrid
+    Friend WithEvents tpRaw1 As TabPage
+    Friend WithEvents grdRaw1 As CTS.Controls.CTSGrid
     Friend WithEvents pnlTab2 As Panel
-    Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents grdTab3 As CTS.Controls.CTSGrid
+    Friend WithEvents tpRaw2 As TabPage
+    Friend WithEvents grdRaw2 As CTS.Controls.CTSGrid
     Friend WithEvents pnlTab3 As Panel
     Friend WithEvents cboRegion As ComboBox
     Friend WithEvents CtsDateTime1 As CTS.Controls.CTSDateTime
@@ -362,6 +362,6 @@ Partial Class frmMain
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnRefresh As Button
-    Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents CtsGrid1 As CTS.Controls.CTSGrid
+    Friend WithEvents tpComposite As TabPage
+    Friend WithEvents grdComposite As CTS.Controls.CTSGrid
 End Class

@@ -4,9 +4,10 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        grdTab1.AllowWrapping = True
-        grdTab2.AllowWrapping = True
-        grdTab3.AllowWrapping = True
+        grdComposite.AllowWrapping = True
+        grdSubmittals.AllowWrapping = True
+        grdRaw1.AllowWrapping = True
+        grdRaw2.AllowWrapping = True
 
         pnlTab1.Visible = False
         pnlTab2.Visible = False
@@ -15,8 +16,8 @@
         If App.IsMember("IT DEVELOPER") Or App.User = "FOWLERJ" Or App.User = "SHEPPART" Or App.User = "MCCULLOJ" Then
             protect = False
         Else
-            tcMain.TabPages.Remove(TabPage2)
-            tcMain.TabPages.Remove(TabPage3)
+            tcMain.TabPages.Remove(tpRaw1)
+            tcMain.TabPages.Remove(tpRaw2)
         End If
 
         RetrieveSettings()
@@ -99,23 +100,15 @@
     End Sub
 
     Private Sub ApplyCompanyFilter()
-        grdTab1.ClearProgramFilters()
-        grdTab1.AddFilter("COLUMN6", "=", cboRegion.SelectedItem,, False, "System.String", "*PROGRAM", True)
+        grdSubmittals.ClearProgramFilters()
+        grdSubmittals.AddFilter("COLUMN6", "=", cboRegion.SelectedItem,, False, "System.String", "*PROGRAM", True)
 
-        'grdTab2.ClearProgramFilters()
-        'CtsGrid2.AddFilter("COLUMN6", "=", ComboBox1.SelectedValue,, False, "System.String", "*PROGRAM", True)
-
-        'grdTab3.ClearProgramFilters()
-        'CtsGrid3.AddFilter("COLUMN6", "=", ComboBox1.SelectedValue,, False, "System.String", "*PROGRAM", True)
-
-        CtsGrid1.ClearProgramFilters()
-        CtsGrid1.AddFilter("C6", "=", cboRegion.SelectedItem,, False, "System.String", "*PROGRAM", True)
+        grdComposite.ClearProgramFilters()
+        grdComposite.AddFilter("C6", "=", cboRegion.SelectedItem,, False, "System.String", "*PROGRAM", True)
 
         If Not Loading Then
-            grdTab1.RefreshData()
-            'grdTab2.RefreshData()
-            'grdTab3.RefreshData()
-            CtsGrid1.RefreshData()
+            grdSubmittals.RefreshData()
+            grdComposite.RefreshData()
         End If
 
     End Sub
@@ -123,16 +116,16 @@
     Private Sub ApplyDateFilters()
 
         Dim d1 As Date = CtsDateTime1.Value
-        grdTab1.AddFilter("F45SUBZ", ">=", d1.ToString("yyyy-MM-dd-00.00.00.000000"),, False, "System.DateTime", "*PROGRAM", True)
-        grdTab2.AddFilter("F45SUBZ", ">=", d1.ToString("yyyy-MM-dd-00.00.00.000000"),, False, "System.DateTime", "*PROGRAM", True)
+        grdSubmittals.AddFilter("F45SUBZ", ">=", d1.ToString("yyyy-MM-dd-00.00.00.000000"),, False, "System.DateTime", "*PROGRAM", True)
+        grdComposite.AddFilter("F45SUBZ", ">=", d1.ToString("yyyy-MM-dd-00.00.00.000000"),, False, "System.DateTime", "*PROGRAM", True)
 
         Dim d2 As Date = CtsDateTime2.Value
-        grdTab1.AddFilter("F45SUBZ", "<=", d2.ToString("yyyy-MM-dd-23.59.59.999999"),, False, "System.DateTime", "*PROGRAM", True)
-        grdTab2.AddFilter("F45SUBZ", "<=", d2.ToString("yyyy-MM-dd-23.59.59.999999"),, False, "System.DateTime", "*PROGRAM", True)
+        grdSubmittals.AddFilter("F45SUBZ", "<=", d2.ToString("yyyy-MM-dd-23.59.59.999999"),, False, "System.DateTime", "*PROGRAM", True)
+        grdComposite.AddFilter("F45SUBZ", "<=", d2.ToString("yyyy-MM-dd-23.59.59.999999"),, False, "System.DateTime", "*PROGRAM", True)
 
         If Not Loading Then
-            grdTab1.RefreshData()
-            grdTab2.RefreshData()
+            grdSubmittals.RefreshData()
+            grdComposite.RefreshData()
         End If
     End Sub
 
@@ -184,11 +177,11 @@
         App.SaveApplicationSetting("RiskManagement", Me.Name, "ToDate", CtsDateTime2.Value.ToString)
     End Sub
 
-    Private Sub grdTab1_dgv_MouseDoubleClick(sender As Object, e As EventArgs) Handles grdTab1.dgv_MouseDoubleClick
+    Private Sub grdTab1_dgv_MouseDoubleClick(sender As Object, e As EventArgs) Handles grdSubmittals.dgv_MouseDoubleClick
 
-        If grdTab1.dgvCTS.CurrentRow IsNot Nothing Then
+        If grdSubmittals.dgvCTS.CurrentRow IsNot Nothing Then
 
-            Dim dgvr As DataGridViewRow = grdTab1.dgvCTS.CurrentRow
+            Dim dgvr As DataGridViewRow = grdSubmittals.dgvCTS.CurrentRow
             Dim FID As Integer = dgvr.Cells("F45FID").Value
 
             Dim f As New NMDetail
@@ -198,11 +191,11 @@
 
     End Sub
 
-    Private Sub CTSGrid1_dgv_MouseDoubleClick(sender As Object, e As EventArgs) Handles CtsGrid1.dgv_MouseDoubleClick
+    Private Sub CTSGrid1_dgv_MouseDoubleClick(sender As Object, e As EventArgs) Handles grdComposite.dgv_MouseDoubleClick
 
-        If CtsGrid1.dgvCTS.CurrentRow IsNot Nothing Then
+        If grdComposite.dgvCTS.CurrentRow IsNot Nothing Then
 
-            Dim dgvr As DataGridViewRow = CtsGrid1.dgvCTS.CurrentRow
+            Dim dgvr As DataGridViewRow = grdComposite.dgvCTS.CurrentRow
             Dim FID As Integer = dgvr.Cells("F45FID").Value
 
             Dim f As New NMDetail
